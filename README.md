@@ -1,14 +1,7 @@
-<h1 align="center">
-  <a href="https://github.com/posquit0/Awesome-CV" title="AwesomeCV Documentation">
-    <img alt="AwesomeCV" src="https://github.com/posquit0/Awesome-CV/raw/master/icon.png" width="200px" height="200px" />
-  </a>
-  <br />
-  Awesome CV
-</h1>
+# What?
+This is a fork of https://github.com/posquit0/Awesome-CV, with some of my own changes.
 
-<p align="center">
-  LaTeX template for your outstanding job application
-</p>
+# How to Use
 
 <div align="center">
   <a href="https://www.paypal.me/posquit0">
@@ -79,7 +72,7 @@ You can [install TeX from upstream](https://tex.stackexchange.com/q/1092) (recom
 
 If you don't want to install the dependencies on your system, this can also be obtained via [Docker](https://docker.com).
 
-#### Usage
+## Usage
 
 At a command prompt, run
 
@@ -97,6 +90,7 @@ In either case, this should result in the creation of ``{your-cv}.pdf``
 
 
 ## Credit
+[**Awesome CV**](https://github.com/posquit0/Awesome-CV) is the original repo.
 
 [**LaTeX**](https://www.latex-project.org) is a fantastic typesetting program that a lot of people use these days, especially the math and computer science people in academia.
 
@@ -105,22 +99,3 @@ In either case, this should result in the creation of ``{your-cv}.pdf``
 [**Roboto**](https://github.com/google/roboto) is the default font on Android and ChromeOS, and the recommended font for Google’s visual language, Material Design.
 
 [**Source Sans Pro**](https://github.com/adobe-fonts/source-sans-pro) is a set of OpenType fonts that have been designed to work well in user interface (UI) environments.
-
-
-## Contact
-
-You are free to take my `.tex` file and modify it to create your own resume. Please don't use my resume for anything else without my permission, though!
-
-If you have any questions, feel free to join me at [`#posquit0` on Freenode](irc://irc.freenode.net/posquit0) and ask away. Click [here](https://kiwiirc.com/client/irc.freenode.net/posquit0) to connect.
-
-Good luck!
-
-
-## Maintainers
-- [posquit0](https://github.com/posquit0)
-- [OJFord](https://github.com/OJFord)
-
-
-## See Also
-
-* [Awesome Identity](https://github.com/posquit0/hugo-awesome-identity) - A single-page Hugo theme to introduce yourself.

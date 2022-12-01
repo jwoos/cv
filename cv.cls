@@ -215,6 +215,7 @@
 \newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of project
+\newcommand*{\projectlinkstyle}[1]{{\fontsize{6pt}{1em}\bodyfont\color{lighttext} #1}}
 \newcommand*{\projectnamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\projectdescriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
@@ -738,21 +739,27 @@
 }
 
 % Define an environment for cvskill
-\newenvironment{cvprojects}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-  \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
-}{%
+\newenvironment{cvprojects}
+	{%
+		\vspace{\acvSectionContentTopSkip}
+		\vspace{-2.0mm}
+		\begin{center}
+		\setlength\tabcolsep{1ex}
+		\setlength{\extrarowheight}{0pt}
+		\begin{tabular*}
+			{\textwidth}
+			{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+	}
+			{%
     \end{tabular*}
   \end{center}
 }
 % Define a line of cv information(skill)
 % Usage: \cvproject{<type>}{<skillset>}
-\newcommand*{\cvproject}[2]{%
-	\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\
+\newcommand*{\cvproject}[3]{%
+	\ifthenelse{\isempty{#3}}
+		{\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\}
+		{\parbox{1ex}{\projectlinkstyle{\href{#3}{\faLink}}}\acvHeaderIconSep\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\}
 }
 
 

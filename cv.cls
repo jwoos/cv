@@ -221,6 +221,11 @@
 \newcommand*{\projectnamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\projectdescriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
+% for elements of patent
+\newcommand*{\patentlinkstyle}[1]{{\fontsize{6pt}{1em}\bodyfont\color{lighttext} #1}}
+\newcommand*{\patentnamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\patentdescriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
+
 % For elements of the cover letter
 \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
@@ -781,7 +786,7 @@
   \vspace{1.0mm}
 }
 
-% Define an environment for cvskill
+% Define an environment for cvprojects
 \newenvironment{cvprojects}
 	{%
 		\vspace{\acvSectionContentTopSkip}
@@ -797,16 +802,16 @@
     \end{tabular*}
   \end{center}
 }
-% Define a line of cv information(skill)
-% Usage: \cvproject{<type>}{<skillset>}
+% Define a line of cv information(project)
+% Usage: \cvproject{<type>}{<project>}
 \newcommand*{\cvproject}[3]{%
 	\ifthenelse{\isempty{#3}}
 		{\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\}
 		{\parbox{1ex}{\projectlinkstyle{\href{#3}{\faLink}}}\acvHeaderIconSep\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\}
 }
 
-% Define an environment for cvskill
-\newenvironment{cvprojects}
+% Define an environment for cvpatent
+\newenvironment{cvpatent}
 	{%
 		\vspace{\acvSectionContentTopSkip}
 		\vspace{-2.0mm}
@@ -821,12 +826,12 @@
     \end{tabular*}
   \end{center}
 }
-% Define a line of cv information(skill)
-% Usage: \cvproject{<type>}{<skillset>}
-\newcommand*{\cvproject}[3]{%
+% Define a line of cv information(patent)
+% Usage: \cvpatent{<type>}{<description>}
+\newcommand*{\cvpatent}[3]{%
 	\ifthenelse{\isempty{#3}}
-		{\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\}
-		{\parbox{1ex}{\projectlinkstyle{\href{#3}{\faLink}}}\acvHeaderIconSep\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\}
+		{\patentnamestyle{#1} & \patentdescriptionstyle{#2} \\}
+		{\parbox{1ex}{\patentlinkstyle{\href{#3}{\faLink}}}\acvHeaderIconSep\patentnamestyle{#1} & \patentdescriptionstyle{#2} \\}
 }
 
 

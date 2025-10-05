@@ -810,8 +810,8 @@
 		{\parbox{1ex}{\projectlinkstyle{\href{#3}{\faLink}}}\acvHeaderIconSep\projectnamestyle{#1} & \projectdescriptionstyle{#2} \\}
 }
 
-% Define an environment for cvpatent
-\newenvironment{cvpatent}
+% Define an environment for cvpatents
+\newenvironment{cvpatents}
 	{%
 		\vspace{\acvSectionContentTopSkip}
 		\vspace{-2.0mm}

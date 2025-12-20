@@ -785,6 +785,15 @@
   \end{justify}
   \vspace{1.0mm}
 }
+\newenvironment{cvsubitems}{%
+  \begin{justify}
+  \begin{itemize}[leftmargin=3ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemii}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+}
 
 % Define an environment for cvprojects
 \newenvironment{cvprojects}
